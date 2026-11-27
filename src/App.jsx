@@ -9,6 +9,7 @@ import { loadSetting, saveSetting, clearSettings } from './lib/storage.js';
 import { getAllProjects, putProject, deleteProject, clearProjects } from './lib/db.js';
 import { buildEntry } from './lib/shopping.js';
 import { buildIssueUrl } from './lib/feedback.js';
+import { loadVisitCount } from './lib/visits.js';
 
 /** Build the full inputs map, merging any saved values over each calculator's defaults. */
 function initialInputs(saved = {}) {
@@ -20,6 +21,7 @@ export default function App() {
   const [units, setUnits] = useState(() => (loadSetting('units', 'imperial') === 'metric' ? 'metric' : 'imperial'));
   const [inputs, setInputs] = useState(() => initialInputs(loadSetting('inputs', {})));
   const [projects, setProjects] = useState([]);
+  const [visits, setVisits] = useState(null);
 
   const refresh = useCallback(async () => setProjects(await getAllProjects()), []);
   useEffect(() => {
@@ -27,6 +29,14 @@ export default function App() {
   }, [refresh]);
   useEffect(() => saveSetting('units', units), [units]);
   useEffect(() => saveSetting('inputs', inputs), [inputs]);
+  useEffect(() => {
+    // Anonymous visit count for the footer; never blocks the app and shows nothing on failure.
+    let active = true;
+    loadVisitCount().then((v) => active && setVisits(v));
+    return () => {
+      active = false;
+    };
+  }, []);
 
   async function saveProject(p) {
     await putProject({ ...p, updatedAt: Date.now() });
@@ -193,6 +203,9 @@ export default function App() {
         <p className="version">
           Measure Twice <span>v{__APP_VERSION__}</span> ·{' '}
           <a href="https://github.com/lance6x5/diy-calc-suite/blob/main/CHANGELOG.md">Changelog</a>
+        </p>
+        <p className="visits no-print" aria-live="polite" hidden={!visits}>
+          {visits?.label}
         </p>
       </footer>
     </>

@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-11-27
+
+### Added
+
+- Anonymous visit counter in the footer (for example "12,345 visits"), using the open-source Abacus counter. Only the first page load of a browser session is counted; Do Not Track and Global Privacy Control are respected, nothing is counted on localhost, no cookies are used and no app data is sent. Shows nothing if the counter is unreachable.
+- Visits badge and a "Privacy & analytics" section in the README.
+- Unit tests for the visit counter.
+
+### Changed
+
+- The service worker never caches counter requests (network-only rule for the counter service).
+
 ## [1.1.0] - 2026-11-27
 
 ### Added
@@ -45,6 +57,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Nothing yet. This is the first release.
 
-[Unreleased]: https://github.com/lance6x5/diy-calc-suite/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/lance6x5/diy-calc-suite/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/lance6x5/diy-calc-suite/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/lance6x5/diy-calc-suite/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/lance6x5/diy-calc-suite/releases/tag/v1.0.0

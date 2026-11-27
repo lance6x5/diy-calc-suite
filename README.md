@@ -2,6 +2,8 @@
 
 # Measure Twice
 
+![Visits](https://abacus.jasoncameron.dev/get/lance6x5.github.io/diy-calc-suite/shield)
+
 **Cut once. Buy right.** Measure Twice is a tabbed collection of home-improvement material estimators that runs entirely in your browser (no backend, works offline as an installable PWA).
 
 **Live app:** https://lance6x5.github.io/diy-calc-suite/
@@ -103,4 +105,13 @@ The in-app links open a pre-filled GitHub issue form (a free GitHub account is r
 
 ## Data & privacy
 
-Everything stays in your browser: projects in IndexedDB and settings/inputs in localStorage. There is no server and no tracking. Use **Data → Export JSON** to back up or move your data.
+Everything stays in your browser: projects in IndexedDB and settings/inputs in localStorage. There is no app server, and your projects and inputs are never sent anywhere. Use **Data → Export JSON** to back up or move your data.
+
+## Privacy & analytics
+
+The footer shows an anonymous visit count. The app counts one page load per browser session using the open-source [Abacus](https://github.com/JasonLovesDoggo/abacus) counter; later loads in the same session only read the total.
+
+- No cookies, no personal data stored, and nothing from the app (projects, inputs, settings) is sent.
+- If your browser sends **Do Not Track** or **Global Privacy Control**, your visit is not counted (the total is still read). Nothing is counted on `localhost`.
+- Like any web request, the request reveals your IP address to the counter service.
+- The count is approximate (it includes bots and is not unique visitors) and public.

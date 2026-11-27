@@ -539,6 +539,11 @@ input[type='file'] {
   font-size: 0.8rem;
   color: var(--muted);
 }
+.visits {
+  margin-top: -0.5rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
 
 .feedback {
   display: flex;

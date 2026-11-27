@@ -33,7 +33,9 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png}'],
-        navigateFallback: 'index.html'
+        navigateFallback: 'index.html',
+        // Never cache the anonymous visit counter; always go to the network.
+        runtimeCaching: [{ urlPattern: /^https:\/\/abacus\.jasoncameron\.dev\//, handler: 'NetworkOnly' }]
       }
     })
   ],
