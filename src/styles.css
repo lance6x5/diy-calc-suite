@@ -586,3 +586,14 @@ input[type='file'] {
     text-decoration: none;
   }
 }
+
+/* Keep wall length/height and the remove button on one line at 375px. */
+.wall-row {
+  flex-wrap: nowrap;
+}
+.wall-row > .field {
+  flex: 1 1 0;
+}
+.wall-row .input-unit .unit {
+  min-width: 0;
+}
