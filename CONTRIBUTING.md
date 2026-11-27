@@ -13,6 +13,10 @@ Open an issue with one of the forms: [Report a bug](https://github.com/lance6x5/
 3. Work happens on a branch, then a pull request whose description says `Fixes #N` so the issue closes when the PR is merged.
 4. User-facing changes are recorded under `Unreleased` in [CHANGELOG.md](CHANGELOG.md) and move into a version section at release time (see "Versioning" in the README).
 
+## Licensing of contributions
+
+Measure Twice is licensed under the [PolyForm Noncommercial License 1.0.0](LICENSE.md). By submitting a pull request, you agree that your contribution is licensed to Silverlight DevTech under the same terms and may also be offered under Silverlight DevTech's commercial licenses.
+
 ## Development
 
 See "Local development" and "Adding a calculator" in the [README](README.md). Run `npm test` before opening a pull request.

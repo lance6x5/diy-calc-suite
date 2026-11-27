@@ -544,6 +544,19 @@ input[type='file'] {
   font-size: 0.75rem;
   color: var(--muted);
 }
+.studio-credit {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.4rem;
+  margin: 0.5rem 0 0;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.studio-credit img {
+  flex: none;
+  border-radius: 4px;
+}
 
 .feedback {
   display: flex;

@@ -207,6 +207,16 @@ export default function App() {
         <p className="visits no-print" aria-live="polite" hidden={!visits}>
           {visits?.label}
         </p>
+        <p className="studio-credit no-print">
+          <img src={`${import.meta.env.BASE_URL}silverlight-mark.svg`} alt="" width="16" height="16" />
+          <span>A Silverlight DevTech project</span>
+          <span aria-hidden="true">·</span>
+          <span>© 2026 Silverlight DevTech</span>
+          <span aria-hidden="true">·</span>
+          <a href="https://github.com/lance6x5/diy-calc-suite/blob/main/LICENSE.md">Noncommercial license</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://lance6x5.github.io/">More apps</a>
+        </p>
       </footer>
     </>
   );
