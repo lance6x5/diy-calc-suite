@@ -1,10 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" fill="#d9480f"/>
-  <rect x="166" y="146" width="180" height="220" rx="22" fill="#fff"/>
-  <rect x="188" y="168" width="136" height="48" rx="8" fill="#1f2933"/>
-  <g fill="#d9480f">
-    <rect x="188" y="234" width="36" height="32" rx="6"/><rect x="238" y="234" width="36" height="32" rx="6"/><rect x="288" y="234" width="36" height="32" rx="6"/>
-    <rect x="188" y="280" width="36" height="32" rx="6"/><rect x="238" y="280" width="36" height="32" rx="6"/><rect x="288" y="280" width="36" height="64" rx="6"/>
-    <rect x="188" y="326" width="86" height="18" rx="6"/>
+  <rect width="512" height="512" fill="#1b4f8a"/>
+  <g transform="translate(256 256) scale(0.72) translate(-256 -256)">
+    <circle cx="210" cy="244" r="126" fill="#f5b400"/>
+    <circle cx="210" cy="244" r="58" fill="#1b4f8a"/>
+    <circle cx="210" cy="244" r="20" fill="#f5b400"/>
+    <rect x="210" y="318" width="224" height="52" fill="#ffd54a"/>
+    <g stroke="#14213d" stroke-width="6" stroke-linecap="round">
+      <line x1="250" y1="322" x2="250" y2="346"/><line x1="275" y1="322" x2="275" y2="336"/>
+      <line x1="300" y1="322" x2="300" y2="346"/><line x1="325" y1="322" x2="325" y2="336"/>
+      <line x1="350" y1="322" x2="350" y2="346"/><line x1="375" y1="322" x2="375" y2="336"/>
+      <line x1="400" y1="322" x2="400" y2="346"/>
+    </g>
+    <rect x="428" y="300" width="20" height="88" rx="5" fill="#e8eef6"/>
   </g>
 </svg>

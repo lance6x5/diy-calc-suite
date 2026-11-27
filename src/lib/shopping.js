@@ -62,7 +62,7 @@ export function aggregateEntries(entries) {
 /** Validate and normalise an imported backup object. Throws on bad input. */
 export function parseBackup(data) {
   if (!data || typeof data !== 'object' || data.app !== 'diy-calc-suite') {
-    throw new Error('This file is not a DIY Calculator Suite backup.');
+    throw new Error('This file is not a Measure Twice backup.');
   }
   const projects = Array.isArray(data.projects)
     ? data.projects.filter((p) => p && typeof p.id === 'string' && typeof p.name === 'string')

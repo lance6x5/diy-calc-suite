@@ -1,14 +1,16 @@
 /* ---------- Theme variables (light default, dark via prefers-color-scheme) ---------- */
 :root {
-  --bg: #f6f4f1;
+  /* Measure Twice brand palette: blueprint blue + tape-measure yellow */
+  --bg: #f4f7fb;
   --surface: #ffffff;
-  --surface-2: #efebe6;
-  --text: #1f2933;
-  --muted: #52606d;
-  --border: #cbc4bb;
-  --accent: #b83c0b;
+  --surface-2: #e8eef6;
+  --text: #14213d;
+  --muted: #4a5a70;
+  --border: #c3cfdd;
+  --accent: #1b4f8a;
   --accent-text: #ffffff;
-  --accent-soft: #fde8dc;
+  --accent-soft: #dbe7f5;
+  --highlight: #f5b400;
   --danger: #b42318;
   --focus: #1d4ed8;
   --radius: 10px;
@@ -17,15 +19,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #14181d;
-    --surface: #1f252c;
-    --surface-2: #2a313a;
-    --text: #e9edf1;
-    --muted: #a9b4bf;
-    --border: #3e4853;
-    --accent: #ff8a4c;
-    --accent-text: #1a0d05;
-    --accent-soft: #3b2316;
+    --bg: #0f1724;
+    --surface: #172234;
+    --surface-2: #22304a;
+    --text: #e8eef6;
+    --muted: #a7b4c7;
+    --border: #33445f;
+    --accent: #f5b400;
+    --accent-text: #1a1300;
+    --accent-soft: #3a3014;
+    --highlight: #f5b400;
     --danger: #ff7b6e;
     --focus: #8ab4ff;
   }
@@ -112,9 +115,33 @@ h3 {
   max-width: 1100px;
   margin: 0 auto;
 }
+.app-header {
+  border-top: 4px solid var(--highlight);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--text);
+  text-decoration: none;
+}
+.brand img {
+  border-radius: 9px;
+  flex: none;
+}
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
 .app-header h1 {
   font-size: 1.25rem;
+  font-weight: 800;
   margin: 0;
+  color: var(--accent);
+}
+.tagline {
+  font-size: 0.8rem;
+  color: var(--muted);
 }
 
 .segmented {
@@ -391,7 +418,7 @@ input[type='file'] {
 }
 .buy-item {
   border: 1px solid var(--border);
-  border-left: 4px solid var(--accent);
+  border-left: 4px solid var(--highlight);
   border-radius: 8px;
   padding: 0.6rem 0.75rem;
   margin-bottom: 0.6rem;
@@ -499,6 +526,11 @@ input[type='file'] {
   color: var(--muted);
   border-top: 1px solid var(--border);
   padding-top: 0.75rem;
+}
+
+.version {
+  font-size: 0.8rem;
+  color: var(--muted);
 }
 
 .print-only {

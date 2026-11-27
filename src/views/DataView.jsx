@@ -14,7 +14,7 @@ export default function DataView({ buildBackup, onImport, onReset }) {
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `diy-calc-suite-${new Date().toISOString().slice(0, 10)}.json`;
+      a.download = `measure-twice-backup-${new Date().toISOString().slice(0, 10)}.json`;
       document.body.appendChild(a);
       a.click();
       a.remove();

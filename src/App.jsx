@@ -128,9 +128,13 @@ export default function App() {
       </a>
       <header className="app-header no-print">
         <div className="header-row">
-          <h1>
-            <span aria-hidden="true">🛠️ </span>DIY Calculator Suite
-          </h1>
+          <a href="#/paint" className="brand">
+            <img src={`${import.meta.env.BASE_URL}logo-mark.svg`} alt="" width="40" height="40" />
+            <div className="brand-text">
+              <h1>Measure Twice</h1>
+              <span className="tagline">Cut once. Buy right.</span>
+            </div>
+          </a>
           <fieldset className="segmented">
             <legend className="sr-only">Units</legend>
             {['imperial', 'metric'].map((u) => (
@@ -160,6 +164,10 @@ export default function App() {
         <p className="disclaimer">
           <strong>Disclaimer:</strong> results are estimates based on common rules of thumb. Always confirm quantities, coverage and
           product specifications with your supplier before buying.
+        </p>
+        <p className="version">
+          Measure Twice <span>v{__APP_VERSION__}</span> ·{' '}
+          <a href="https://github.com/lance6x5/diy-calc-suite/blob/main/CHANGELOG.md">Changelog</a>
         </p>
       </footer>
     </>

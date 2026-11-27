@@ -1,6 +1,8 @@
-# DIY Project Calculator Suite
+<p align="center"><img src="public/logo.svg" alt="Measure Twice logo" width="420"></p>
 
-A tabbed collection of home-improvement material estimators that runs entirely in your browser (no backend, works offline as an installable PWA).
+# Measure Twice
+
+**Cut once. Buy right.** Measure Twice is a tabbed collection of home-improvement material estimators that runs entirely in your browser (no backend, works offline as an installable PWA).
 
 **Live app:** https://lance6x5.github.io/diy-calc-suite/
 
@@ -74,6 +76,20 @@ All calculator state is stored in **imperial** units. `NumberField` converts val
 3. Create a form component `<Name>Form.jsx` receiving `{ inputs, update, units }`. Use `NumberField` with a `dim` (`length`, `small`, `area`, `volume`, `coverage`, `bag`) so the field converts units automatically.
 4. Create `index.js` exporting `{ id, title, description, defaults, calculate, present, formula, Form }`.
 5. Import it in `src/calculators/index.js` and add it to `CALCULATORS`. The tab, route (`#/<id>`), persistence and project saving work automatically.
+
+## Versioning
+
+Measure Twice uses [Semantic Versioning](https://semver.org/). The current version is in `package.json`, is shown in the app footer (injected at build time as `__APP_VERSION__`), and every release is listed in [CHANGELOG.md](CHANGELOG.md) (Keep a Changelog format).
+
+- **MAJOR**: a breaking change to stored data or the export/import schema (for example, backups from older versions need migrating).
+- **MINOR**: new features that stay backward compatible, such as a new calculator or option.
+- **PATCH**: bug fixes and small corrections that don't change features or data.
+
+To cut a release: update `version` in `package.json`, move the `Unreleased` notes in `CHANGELOG.md` into a new dated version section, commit, push, then tag it (`git tag -a vX.Y.Z -m "Measure Twice vX.Y.Z"` and `git push origin vX.Y.Z`) and create a GitHub release from that changelog section.
+
+## Branding
+
+The logo is `public/logo.svg` (mark plus wordmark), and the mark on its own is `public/logo-mark.svg`. The favicon, `apple-touch-icon.png` and the PWA icons (`icon-192.png`, `icon-512.png`, `icon-maskable-512.png`) are rendered from the mark. The brand palette (blueprint blue `#1b4f8a` and tape-measure yellow `#f5b400`) is defined as CSS variables in `src/styles.css`, with light and dark variants.
 
 ## Data & privacy
 
