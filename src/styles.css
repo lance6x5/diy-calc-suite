@@ -246,6 +246,7 @@ main:focus {
 
 /* ---------- Forms ---------- */
 fieldset {
+  min-width: 0; /* default min-content width overflows narrow screens */
   border: 1px solid var(--border);
   border-radius: var(--radius);
   margin: 0 0 1rem;
@@ -263,7 +264,13 @@ legend {
   align-items: flex-end;
 }
 .row > .field {
-  flex: 1 1 140px;
+  flex: 1 1 130px;
+  min-width: 0;
+}
+.calc-grid > *,
+.input-unit input,
+.input-unit select {
+  min-width: 0;
 }
 .grow {
   flex: 1 1 200px;
