@@ -8,6 +8,7 @@ import { useHashPath, navigate, uid } from './lib/router.js';
 import { loadSetting, saveSetting, clearSettings } from './lib/storage.js';
 import { getAllProjects, putProject, deleteProject, clearProjects } from './lib/db.js';
 import { buildEntry } from './lib/shopping.js';
+import { buildIssueUrl } from './lib/feedback.js';
 
 /** Build the full inputs map, merging any saved values over each calculator's defaults. */
 function initialInputs(saved = {}) {
@@ -165,6 +166,30 @@ export default function App() {
           <strong>Disclaimer:</strong> results are estimates based on common rules of thumb. Always confirm quantities, coverage and
           product specifications with your supplier before buying.
         </p>
+        <section className="feedback no-print" aria-labelledby="feedback-heading">
+          <h2 id="feedback-heading" className="feedback-heading">
+            Feedback
+          </h2>
+          <div className="feedback-actions">
+            <a
+              className="feedback-link"
+              href={buildIssueUrl('bug', { version: __APP_VERSION__, userAgent: navigator.userAgent })}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Report a bug<span className="sr-only"> (opens GitHub in a new tab)</span>
+            </a>
+            <a
+              className="feedback-link"
+              href={buildIssueUrl('feature', { version: __APP_VERSION__ })}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Request a feature<span className="sr-only"> (opens GitHub in a new tab)</span>
+            </a>
+          </div>
+          <p className="feedback-note">Opens GitHub — a free GitHub account is required. Don't include personal data.</p>
+        </section>
         <p className="version">
           Measure Twice <span>v{__APP_VERSION__}</span> ·{' '}
           <a href="https://github.com/lance6x5/diy-calc-suite/blob/main/CHANGELOG.md">Changelog</a>

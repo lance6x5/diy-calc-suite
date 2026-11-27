@@ -1,7 +1,7 @@
 {
   "name": "diy-calc-suite",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "description": "Client-side home-improvement material estimators (paint, deck, concrete, drywall, flooring, mulch).",
   "scripts": {

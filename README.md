@@ -91,6 +91,16 @@ To cut a release: update `version` in `package.json`, move the `Unreleased` note
 
 The logo is `public/logo.svg` (mark plus wordmark), and the mark on its own is `public/logo-mark.svg`. The favicon, `apple-touch-icon.png` and the PWA icons (`icon-192.png`, `icon-512.png`, `icon-maskable-512.png`) are rendered from the mark. The brand palette (blueprint blue `#1b4f8a` and tape-measure yellow `#f5b400`) is defined as CSS variables in `src/styles.css`, with light and dark variants.
 
+## Feedback & issues
+
+Found a bug or have an idea? Use **Report a bug** or **Request a feature** in the app footer, or go straight to GitHub:
+
+- [Issues](https://github.com/lance6x5/diy-calc-suite/issues)
+- [Report a bug](https://github.com/lance6x5/diy-calc-suite/issues/new?template=bug_report.yml)
+- [Request a feature](https://github.com/lance6x5/diy-calc-suite/issues/new?template=feature_request.yml)
+
+The in-app links open a pre-filled GitHub issue form (a free GitHub account is required). Only the app version and your browser name are filled in, never your projects or inputs. See [CONTRIBUTING.md](CONTRIBUTING.md) for how issues are triaged.
+
 ## Data & privacy
 
 Everything stays in your browser: projects in IndexedDB and settings/inputs in localStorage. There is no server and no tracking. Use **Data → Export JSON** to back up or move your data.

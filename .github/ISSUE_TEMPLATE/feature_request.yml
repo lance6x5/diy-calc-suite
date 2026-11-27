@@ -1,0 +1,33 @@
+name: Feature request
+description: Suggest a new calculator, option or improvement for Measure Twice.
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea. Please don't include personal data.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / use case
+      description: What are you trying to do, and what gets in the way?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: How would you like Measure Twice to handle it?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives
+      description: Other approaches or workarounds you have considered.
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: Shown in the app footer (for example 1.1.0).

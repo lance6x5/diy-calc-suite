@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-11-27
+
+### Added
+
+- In-app feedback: "Report a bug" and "Request a feature" links in the footer open a pre-filled GitHub issue (app version and browser filled in automatically; no personal data is sent).
+- GitHub issue forms for bug reports and feature requests, labelled `bug`/`enhancement` plus `triage`.
+- CONTRIBUTING.md describing the issue triage flow, and a "Feedback & issues" section in the README.
+- Unit tests for the feedback URL builder.
+
+### Fixed
+
+- The logo wordmark is now readable on dark backgrounds (for example the README in GitHub dark mode).
+
 ## [1.0.0] - 2026-11-27
 
 ### Added
@@ -32,5 +45,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Nothing yet. This is the first release.
 
-[Unreleased]: https://github.com/lance6x5/diy-calc-suite/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/lance6x5/diy-calc-suite/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/lance6x5/diy-calc-suite/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/lance6x5/diy-calc-suite/releases/tag/v1.0.0
